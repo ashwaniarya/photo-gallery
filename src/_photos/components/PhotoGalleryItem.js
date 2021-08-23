@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme)=>{
     height: 'auto', 
     display: 'flex', 
     justifyContent: 'center',
+    cursor:'pointer',
     backgroundColor: 'grey', 
     '@media (min-width: 480px)': {
       flexBasis: '100%',
