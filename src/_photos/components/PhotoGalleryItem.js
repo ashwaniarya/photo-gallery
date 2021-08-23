@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme)=>{
   img: {
     width: '100%', 
     '@media (min-width: 480px)': {
-      height: 'auto',
+      height: 'auto'
     },
     objectFit:'cover'
   }
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme)=>{
 function PhotoGalleryItem({ photoUrl,photoAlt, height, width }) {
   const classes = useStyles();
   return (<Box className={classes.imgContainer}>
-    <img className={classes.img} src={photoUrl} alt={photoAlt} height={'auto'}/>
+    <img className={classes.img} src={photoUrl} alt={photoAlt} height={height} width={width}/>
     </Box>
   )
 }
