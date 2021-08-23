@@ -5,6 +5,9 @@ import { makeStyles } from '@material-ui/styles'
 const useStyles = makeStyles(()=>({
   imgItemContainer: {
     display: 'flex',
+    '@media (max-width: 480px)':{
+      display:'block'
+    },
     flexWrap: 'wrap',
   }
 }))
