@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import shortid from "shortid";
 import Box from "@material-ui/core/Box";
 import { Typography } from "@material-ui/core";
+import { ITEM_PER_REQUEST, EXTRAS, DEFAULT_IMG_HEIGTH, DEFAULT_IMG_WIDTH } from './constants'
 
 const useStyles = makeStyles((theme) => ({
   galleryContainer: {
@@ -76,8 +77,8 @@ function PhotoMain() {
           return {
             url: item.url_c,
             alt: item.title,
-            height: item.height_c || 640,
-            width: item.width_c || 640,
+            height: item.height_c || DEFAULT_IMG_HEIGTH,
+            width: item.width_c || DEFAULT_IMG_WIDTH,
             id: shortid.generate(),
           };
         });
@@ -101,8 +102,8 @@ function PhotoMain() {
         ProcessItems(
           PhotoService.serchPhotos({
             page: pageNumber.current,
-            perPage: 8,
-            extras: "url_c",
+            perPage: ITEM_PER_REQUEST,
+            extras: EXTRAS,
             searchQuery,
           })
         );
@@ -110,8 +111,8 @@ function PhotoMain() {
         ProcessItems(
           PhotoService.getRecentPhotos({
             page: pageNumber.current,
-            perPage: 8,
-            extras: "url_c",
+            perPage: ITEM_PER_REQUEST,
+            extras: EXTRAS,
           })
         );
       }
