@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonJS",
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "ui-kit": ["./ui-kit"],
+      "sdk": ["./sdk"],
+      "utils": ["./utils"]
+    }
+  }
+}
