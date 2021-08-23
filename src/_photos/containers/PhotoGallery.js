@@ -65,7 +65,7 @@ function PhotoGallery({ photos, showPlaceHolder = false}) {
         {photos.map(photo=>{
           return <PhotoGalleryItem key={photo.id} photoUrl={photo.url} photoAlt={photo.alt} height={photo.height} width={photo.width}/>
         })}
-        {showPlaceHolder && Array(2).fill(1).map(()=>{
+        {showPlaceHolder && Array(4).fill(1).map((item,index)=>{
           let id = shortid.generate();
           return <PhotoGalleryLoaderItem key={id}/>
         })}
