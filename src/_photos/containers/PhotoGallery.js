@@ -34,9 +34,11 @@ function PhotoGallery({ photos, showPlaceHolder = false}) {
   const [src, setSrc] = useState('');
   const [alt, setAlt] = useState('');
   const handleItemEvent = (e)=>{
-    setSrc(e.target.currentSrc);
-    setAlt(e.target.alt);
-    setOpen(true);
+    if(e.target.currentSrc) {
+      setSrc(e.target.currentSrc);
+      setAlt(e.target.alt);
+      setOpen(true);
+    }
   }
   if(photos.length < 0 ) return null;
   return (
